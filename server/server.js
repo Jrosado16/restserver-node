@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-app.get('/', function(req, res) {
+app.get('/usuario', function(req, res) {
     res.json('Hola mundo')
 })
 
@@ -22,14 +22,14 @@ app.put('/usuario/:id', function(req, res) {
     })
 })
 
-app.post('/', function(req, res) {
+app.post('/usuario', function(req, res) {
 
     let body = req.body
     res.json({
         body
     })
 })
-app.delete('/', function(req, res) {
+app.delete('/usuario', function(req, res) {
     res.json('delete Usuario')
 })
 
